@@ -1,0 +1,11 @@
+INDEX VERSION 1.131
+C:\Users\dhars\STS4_workspace\deepi\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\403584947.index
+\day1-3\src\main\java
+C:\Users\dhars\STS4_workspace\deepi\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3058903223.index
+\CIA1-3\src\main\java
+C:\Users\dhars\STS4_workspace\deepi\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2997287050.index
+\CIA1-1\src\main\java
+C:\Users\dhars\STS4_workspace\deepi\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\499250989.index
+\newproj\src\main\java
+C:\Users\dhars\STS4_workspace\deepi\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2678652144.index
+\day1-2\src\main\java

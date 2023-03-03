@@ -1,0 +1,48 @@
+package com.example.demo.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.example.demo.entity.entity;
+
+import com.example.demo.repository.repository;
+
+
+
+@Service
+public class service {
+	@Autowired
+	repository Repo;
+	public entity saveDetails(entity e) {
+		return Repo.save(e);
+	}
+	public entity updateDetails(entity e1) {
+		return Repo.saveAndFlush(e1);
+	}
+	public void deleteDetails(int id) {
+		Repo.deleteById(id);
+	}
+	public String add(entity m) {
+		Repo.save(m);
+		return "Added";
+	}
+	public List<entity> getDetails(){
+		return Repo.findAll();
+	}
+	
+	public List<entity> getSorted(String field) {
+		return Repo.findAll(Sort.by(Sort.Direction.ASC,field));
+	}
+	
+	public List<entity> getWithPagination(@PathVariable int offset, @PathVariable int pageSize) {
+		Page<entity> page =Repo.findAll(PageRequest.of(offset, pageSize));
+		return page.getContent();
+	}
+
+}

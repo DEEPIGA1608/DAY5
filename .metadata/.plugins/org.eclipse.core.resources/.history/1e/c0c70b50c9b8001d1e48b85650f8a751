@@ -1,0 +1,84 @@
+package com.example.demo.models;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="tt1")
+public class Student {
+	@Id
+	@Column(name="id")
+	private int id;
+	@Column(name="studentname")
+	private String Studentname;
+	@Column(name="departmentname")
+	private String departmentname;
+	@Column(name="section")
+	private String section;
+	@Column(name="mobile")
+	private long mobile;
+	@Column(name="mailid")
+	private String mailid;
+	@Column(name="address")
+	private String address;
+		public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		id = this.id;
+	}
+	public String getStudentname() {
+		return Studentname;
+	}
+	public void setStudentname(String studentname) {
+		Studentname = studentname;
+	}
+	
+	public String getSection() {
+		return section;
+	}
+	public void setSection(String section) {
+		this.section = section;
+	}
+	public long getMobile() {
+		return mobile;
+	}
+	public void setMobile(long mobile) {
+		this.mobile = mobile;
+	}
+	public String getMailid() {
+		return mailid;
+	}
+	public void setMailid(String mailid) {
+		this.mailid = mailid;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+		public Student() {
+	}
+		public Student(int id, String studentname, String departmentname, String section, long mobile, String mailid,
+				String address) {
+			super();
+			this.id = id;
+			Studentname = studentname;
+			this.departmentname = departmentname;
+			this.section = section;
+			this.mobile = mobile;
+			this.mailid = mailid;
+			this.address = address;
+		}
+		public String getDepartmentname() {
+			return departmentname;
+		}
+		public void setDepartmentname(String departmentname) {
+			this.departmentname = departmentname;
+		}
+	
+	
+}

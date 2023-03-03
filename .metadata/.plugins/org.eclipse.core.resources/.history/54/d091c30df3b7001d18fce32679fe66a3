@@ -1,0 +1,66 @@
+package com.example.demo.models;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="Patient")
+public class Family {
+	@Id
+	@Column(name="Id")
+	private int Id;
+	@Column(name="Studentname")
+	private String Studentname;
+	@Column(name="Departmentname")
+	private String Departmentname;
+	@Column(name="section")
+	private String section;
+	@Column(name="mobile")
+	private long mobile;
+	@Column(name="mailid")
+	private String mailid;
+	@Column(name="address")
+	private String address;
+	
+	
+
+	public Family(int patientId, String patientname, int age, String disease) {
+		super();
+		this.patientId = patientId;
+		this.patientname = patientname;
+		this.age = age;
+		this.disease = disease;
+	}
+	public int getPatientId() {
+		return patientId;
+	}
+	public void setPatientId(int patientId) {
+		this.patientId = patientId;
+	}
+	public String getPatientname() {
+		return patientname;
+	}
+	public void setPatientname(String patientname) {
+		this.patientname = patientname;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public String getDisease() {
+		return disease;
+	}
+	public void setDisease(String disease) {
+		this.disease = disease;
+	}
+	public Family() {
+	}
+	public String toString() {
+		return "Patient_id="+patientId+"Patient_name="+patientname+"Age="+age+"Disease="+disease;
+	}
+	
+}
